@@ -1,5 +1,10 @@
 #!/bin/bash
+# Written by Ben Murray, 2018
 
+# This script installs dependencies, mostly for YouCompleteMe
+# It then moves all the config files into their locations
+# It installs vundle, installs vim plugins
+# Then it compiles YouCompleteMe
 sudo apt install vim -y &&
 sudo apt install cmake -y &&
 sudo apt install build-essential -y &&
