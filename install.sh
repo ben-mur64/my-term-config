@@ -16,6 +16,7 @@ mkdir ~/.vim
 cp .vimrc ~/.vim/.vimrc
 cp .bashrc ~/.bashrc
 cp .dircolors ~/.dircolors
+cp .ycm_extra_conf.py ~/.ycm_extra_conf.py
 
 echo "source ~/.vim/.vimrc" > ~/.vimrc
 
