@@ -35,6 +35,13 @@ Plugin 'jistr/vim-nerdtree-tabs'
 " ctrl-p super search
 Plugin 'kien/ctrlp.vim'
 
+" better markdown syntax
+Bundle 'gabrielelana/vim-markdown'
+
+" better status line
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " Colorscheme
 Plugin 'altercation/vim-colors-solarized'
 
@@ -59,9 +66,22 @@ let g:ycm_autoclose_preview_window_after_completion=1
 " defines a shortcut for goto defintion
 map <leader>g  :YcomCompleter GoToDefinitionElseDeclaration<CR>
 
+" lets YCM use a minimal extra config file
+let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf.py"
+
 " NerdTree "
 " ctrl-n opens filetree
 map <C-n> :NERDTreeToggle<CR>
+
+" Airline "
+" better tabline
+let g:airline#extensions#tabline#enabled = 1
+
+" remove default status
+set noshowmode
+
+" colorscheme for airline
+let g:airline_theme='solarized'
 
 " Colors "
 " colorscheme enabling
@@ -102,14 +122,14 @@ syntax on
 
 " Web Files "
 " full stack development tab completion
-au BufNewFile,BufRead *.js, *.html, *.css
+au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2
 
 " Markdown/Text "
 " turn on spellchecker on markdown and txt files
-au BufNewFile,BufRead *.md, *.txt 
+au BufNewFile,BufRead *.md,*.markdown,*.txt 
     \ set spell
 
 "-------------------Quality-of-Life------------------------"
